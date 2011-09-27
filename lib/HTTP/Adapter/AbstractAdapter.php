@@ -19,10 +19,10 @@
  * THE SOFTWARE.
  */
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/API/APIException.php');
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/API/WoW/Exceptions/NotFoundException.php');
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/Cache/Cache.php');
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/Response/AbstractResponse.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/APIException.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/WoW/Exceptions/NotFoundException.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/Cache/Cache.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/Response/AbstractResponse.php');
 
 abstract class AbstractAdapter
 {

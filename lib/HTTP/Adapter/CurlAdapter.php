@@ -1,7 +1,7 @@
 <?php
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/Response/CurlResponse.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/Response/CurlResponse.php');
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/HTTPException.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/HTTPException.php');
 
 class CurlAdapter
 extends AbstractAdapter

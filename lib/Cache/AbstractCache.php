@@ -19,7 +19,7 @@
  * THE SOFTWARE.
  */
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/Cache/Cache.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/Cache/Cache.php');
  
 /**
  * Base class for cache driver implementations.

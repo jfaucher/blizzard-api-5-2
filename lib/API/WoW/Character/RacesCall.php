@@ -19,7 +19,7 @@
  * THE SOFTWARE.
  */
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/API/AbstractCall.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/AbstractCall.php');
 
 /**
  * Call for the WoW Data Character Races Api

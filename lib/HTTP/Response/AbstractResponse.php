@@ -1,5 +1,5 @@
 <?php
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/API/APIResponse.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/APIResponse.php');
 
 abstract class AbstractResponse
 implements ApiResponse

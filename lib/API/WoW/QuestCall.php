@@ -19,19 +19,63 @@
  * THE SOFTWARE.
  */
 
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/APIException.php');
 require_once(ROOT.DS.APP_DIR.DS.'lib/API/AbstractCall.php');
 
 /**
- * Call for the WoW Data Character Races Api
+ * Call for the WoW Quest Api
  *
  * @author 		Jelte Steijaert <jelte AT 4tueel DOT be>
  * @version		0.1.0
  */
-class GuildPerksCall
+class QuestCall
 extends AbstractCall
 {
     /**
      * {@inheritdoc}
      */
-    protected $_path = 'data/guild/perks';
+    protected $_path = 'quest/{questid}';
+
+    /**
+     * Id of the requested quest
+     *
+     * @access protected
+     * @var integer
+     */
+    protected $questid;
+
+    /**
+     * Constructor
+     *
+     * @access public
+     * @param integer $questid
+     * @return void
+     */
+    public function __construct($questid)
+    {
+        $this->setQuestid($questid);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPath()
+    {
+        return str_replace('{questid}',$this->questid, $this->_path);
+    }
+
+    /**
+     * Set the questid
+     *
+     * @access public
+     * @param $questid
+     * @throws ApiException when the questid is empty or not numeric
+     */
+    public function setQuestid($questid)
+    {
+        if (empty($questid) || !is_numeric($questid)) {
+            throw new InvalidArgumentException(sprintf('Item ID "%s" invalid for %s.', $questid, __CLASS__));
+        }
+        $this->questid = $questid;
+    }
 }

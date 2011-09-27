@@ -19,7 +19,7 @@
 * THE SOFTWARE.
 */
 
- require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/Cache/AbstractCache.php');
+ require_once(ROOT.DS.APP_DIR.DS.'lib/Cache/AbstractCache.php');
 
 /**
 * Memcache cache driver.

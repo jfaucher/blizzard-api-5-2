@@ -1,7 +1,7 @@
 <?php
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/Response/FallbackResponse.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/Response/FallbackResponse.php');
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/API/APIResponse.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/APIResponse.php');
 
 class FallbackAdapter
 extends AbstractAdapter

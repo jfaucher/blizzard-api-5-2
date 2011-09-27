@@ -19,19 +19,59 @@
  * THE SOFTWARE.
  */
 
+require_once(ROOT.DS.APP_DIR.DS.'lib/API/APIException.php');
 require_once(ROOT.DS.APP_DIR.DS.'lib/API/AbstractCall.php');
 
 /**
- * Call for the WoW Data Character Races Api
+ * Call for the WoW Item Api
  *
  * @author 		Jelte Steijaert <jelte AT 4tueel DOT be>
  * @version		0.1.0
  */
-class GuildPerksCall
-extends AbstractCall
+class ItemCall extends AbstractCall
 {
     /**
      * {@inheritdoc}
      */
-    protected $_path = 'data/guild/perks';
+    protected $_path = 'item/{itemid}';
+
+    /**
+     * Id of the requested item
+     *
+     * @access protected
+     * @var integer
+     */
+    protected $itemid;
+
+    /**
+     * Constructor
+     *
+     * @access public
+     * @param integer $itemid
+     * @return void
+     */
+    public function __construct($itemid)
+    {
+        $this->setItemid($itemid);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPath()
+    {
+        return str_replace('{itemid}',$this->itemid, $this->_path);
+    }
+
+    /**
+     * Set the itemid
+     *
+     * @access public
+     * @param $itemid
+     * @throws ApiException when the itemid is empty or not numeric
+     */
+    public function setItemid($itemid)
+    {
+        $this->itemid = $itemid;
+    }
 }

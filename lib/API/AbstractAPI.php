@@ -19,15 +19,15 @@
  * THE SOFTWARE.
  */
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/HTTPException.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/HTTPException.php');
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/Adapter/AbstractAdapter.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/Adapter/AbstractAdapter.php');
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/Adapter/CurlAdapter.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/Adapter/CurlAdapter.php');
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/HTTP/Adapter/FallbackAdapter.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/HTTP/Adapter/FallbackAdapter.php');
 
-require_once(ROOT.DS.APP_DIR.DS.'vendors/WoW_API/Cache/Cache.php');
+require_once(ROOT.DS.APP_DIR.DS.'lib/Cache/Cache.php');
 
 /**
  * Primary API class that all children source APIs extend. Provides functionality for

@@ -7,7 +7,7 @@ This is a PHP client for Blizzard's Battle.net Web API.
 
 Requirements
 ------------
-* PHP 5.3
+* PHP 5.2
 
 Optional
 --------
@@ -16,25 +16,33 @@ Optional
 
 Quickstart
 ----------
-If you are working with PHP 5.3, you are hopefully working with some form of autoloader.
-If not see the example.php how to easily add autoloading to your project.
+Because this branch if for PHP 5.2, the auto loader functionality of the origional will not work. to include the library, <?php require-once('/full/path/to/lib/WoW/WoWApi.php'); ?>
 
-Once you have added the library to your autoloader you can create a new instance 
-of te WowApi class.
+Please note that the includes in the library assume the following are defined:
 
-	<?php
+ROOT = Document Root
+DS = Directory Separator
+APP_DIR = Application Directory
+
+For example, I am using cakePHP for my application. My root is the directory that the cakePHP file structure is in, and app is the 'app' folder. You will need to adapt these defined variables to suit your needs.
+
+Usage:
+
+<?php
 	$wowApi = new WowApi(array('region'=>'eu', 
-							   'locale'=>'en_GB',
-							   ['publicApiKey' =>'<YOUR-KEY>', 
-							   'privateApiKey'=>'<YOUR-KEY>']
-							   ));
+				   'locale'=>'en_GB',
+				   ['publicApiKey' =>'<YOUR-KEY>', 
+				   'privateApiKey'=>'<YOUR-KEY>']
+				   ));
+?>
 or
-	
+<?php
 	$wowApi = new WowApi();
 	$wowApi->setRegion('us');
 	$wowApi->setLocale('en_US');
 	$wowApi->setPublicApiKey('<YOUR-KEY>');
 	$wowApi->setPrivateApiKey('<YOUR-KEY>');
+?>
 Note: Most calls have been tested with Api-keys.
 
 ### Realm Status
