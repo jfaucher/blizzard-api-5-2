@@ -28,21 +28,19 @@ For example, I am using cakePHP for my application. My root is the directory tha
 
 Usage:
 
-<?php
+	<?php
 	$wowApi = new WowApi(array('region'=>'eu', 
-				   'locale'=>'en_GB',
-				   ['publicApiKey' =>'<YOUR-KEY>', 
-				   'privateApiKey'=>'<YOUR-KEY>']
-				   ));
-?>
+							   'locale'=>'en_GB',
+							   ['publicApiKey' =>'<YOUR-KEY>', 
+							   'privateApiKey'=>'<YOUR-KEY>']
+							   ));
 or
-<?php
-	$wowApi = new WowApi();
-	$wowApi->setRegion('us');
-	$wowApi->setLocale('en_US');
-	$wowApi->setPublicApiKey('<YOUR-KEY>');
-	$wowApi->setPrivateApiKey('<YOUR-KEY>');
-?>
+
+		$wowApi = new WowApi();
+		$wowApi->setRegion('us');
+		$wowApi->setLocale('en_US');
+		$wowApi->setPublicApiKey('<YOUR-KEY>');
+		$wowApi->setPrivateApiKey('<YOUR-KEY>');
 Note: Most calls have been tested with Api-keys.
 
 ### Realm Status
