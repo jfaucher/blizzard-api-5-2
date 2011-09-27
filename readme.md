@@ -16,7 +16,9 @@ Optional
 
 Quickstart
 ----------
-Because this branch if for PHP 5.2, the auto loader functionality of the origional will not work. to include the library, <?php require-once('/full/path/to/lib/WoW/WoWApi.php'); ?>
+Because this branch if for PHP 5.2, the auto loader functionality of the origional will not work. to include the library, 
+
+		<?php require-once('/full/path/to/lib/WoW/WoWApi.php'); ?>
 
 Please note that the includes in the library assume the following are defined:
 
@@ -34,13 +36,16 @@ Usage:
 							   ['publicApiKey' =>'<YOUR-KEY>', 
 							   'privateApiKey'=>'<YOUR-KEY>']
 							   ));
+		?>
 or
 
+		<?php
 		$wowApi = new WowApi();
 		$wowApi->setRegion('us');
 		$wowApi->setLocale('en_US');
 		$wowApi->setPublicApiKey('<YOUR-KEY>');
 		$wowApi->setPrivateApiKey('<YOUR-KEY>');
+		?>
 Note: Most calls have been tested with Api-keys.
 
 ### Realm Status
