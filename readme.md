@@ -28,8 +28,8 @@ For example, I am using cakePHP for my application. My root is the directory tha
 
 Usage:
 
-	<?php
-	$wowApi = new WowApi(array('region'=>'eu', 
+		<?php
+		$wowApi = new WowApi(array('region'=>'eu', 
 							   'locale'=>'en_GB',
 							   ['publicApiKey' =>'<YOUR-KEY>', 
 							   'privateApiKey'=>'<YOUR-KEY>']
